@@ -9,10 +9,11 @@ function searchText($searchText)
 
     return function ($taskItem) use ($searchText) {
 
-        if ($searchText !== '') {
-            
-            $stringToLower = strtolower($taskItem['taskName']);
-            $searchToLower = trim(strtolower($searchText));
+        $cleanedSpaces = preg_replace('/[ ]+/m', ' ', $searchText);
+        $stringToLower = strtolower($taskItem['taskName']);
+        $searchToLower = trim(strtolower($cleanedSpaces));
+        if ($searchToLower !== '') {
+ 
             $result = strpos($stringToLower, $searchToLower) !== false;
             
         } else {
