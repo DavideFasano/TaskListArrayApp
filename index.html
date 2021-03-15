@@ -15,34 +15,35 @@
         </div>
     </div>
  
-    <div class="container">
-        <div class="input-group pb-3 my-1">
-            <label class="w-100 pb-1 fw-bold" for="searchText">Cerca</label>
-            <input id="searchText"  type="text" class="form-control" placeholder="attività da cercare">
-            <div class="input-group-append">
-              <button class="btn btn-primary" type="button">Invia</button>
+    <form action="./index.php">
+        <div class="container">
+            <div class="input-group pb-3 my-1">
+                <label class="w-100 pb-1 fw-bold" for="searchText">Cerca</label>
+                <input id="searchText"  type="text" class="form-control" placeholder="attività da cercare">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button">Invia</button>
+                </div>
             </div>
-        </div>
-
-        <div id="status-radio" class=" mb-3">
-            <div class="fw-bold pe-2 w-100">Stato attività</div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" value="option1">
-                <label class="form-check-label" >tutti</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio"   value="option1">
-                <label class="form-check-label" >da fare</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio"   value="option2">
-                <label class="form-check-label" >in lavorazione</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio"   value="option2">
-                <label class="form-check-label" >fatto</label>
-              </div>
-        </div>
+            <div id="status-radio" class=" mb-3">
+                <div class="fw-bold pe-2 w-100">Stato attività</div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" value="option1">
+                    <label class="form-check-label" >tutti</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio"   value="option1">
+                    <label class="form-check-label" >da fare</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio"   value="option2">
+                    <label class="form-check-label" >in lavorazione</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio"   value="option2">
+                    <label class="form-check-label" >fatto</label>
+                  </div>
+            </div>
+    </form>
     
         <section class="tasklist mt-3">
             <h1 class="fw-bold fs-6">Elenco delle attività</h1>
