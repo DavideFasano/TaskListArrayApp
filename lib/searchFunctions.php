@@ -18,7 +18,15 @@ function searchStatus(string $_status) : callable {
     return function($mockTaskItem) use ($_status){
         //echo $status."<br>";
         //echo $mockTaskItem['status']."<br>";
-        $result = strpos($mockTaskItem['status'],$_status) !== false;
+        if($_status!==''){
+            if($_status!=='all'){
+                $result = strpos($mockTaskItem['status'],$_status) !== false;
+            }else{
+                $result = true;
+            }
+        }else{
+            $result = true;
+        }
         //$result=($mockTaskItem['status']===$status);
         return $result;
     };
