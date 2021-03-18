@@ -4,9 +4,9 @@ require "./searchFunctions.php";
 
 $testCases = [
     [
-        'statuss' => 'progress',
-        'expectedCount' => 2,
-        'description' => 'ricerca di status in progress'
+        'statuss' => 'progress',                           //$statuss = 'progress'
+        'expectedCount' => 2,                              //$espectedCount = 2
+        'description' => 'ricerca di status in progress'   //$description = 'ricerca....'
     ],
     [
         'statuss' => 'todo',
@@ -47,11 +47,10 @@ $mockTaskList = array(
 
 foreach ($testCases as $testCase) {
     extract($testCase);
-    //echo $statuss." ";
     $actual = array_filter($mockTaskList, searchStatus($statuss));
-    echo "<pre>";
+    
     assertEquals('array', gettype($actual),'il risultato è un ');
     assertEquals($expectedCount, count($actual), $description);
-    echo "</pre>";
+    
 }
 var_dump($actual);

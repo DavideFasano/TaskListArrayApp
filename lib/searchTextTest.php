@@ -4,7 +4,7 @@ require "./searchFunctions.php";
 
 $testCases = [
     [
-        'searchText' => 'Latte',
+        'searchText' => 'Latte', //latte
         'expectedCount' => 2,
         'description' => 'ricerca testo Latte'
     ],

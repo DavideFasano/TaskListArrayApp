@@ -15,7 +15,6 @@ function searchText($searchText)
         if ($searchToLower !== '') {
  
             $result = strpos($stringToLower, $searchToLower) !== false;
-            
         } else {
             $result = true;
         }
@@ -30,20 +29,12 @@ function searchText($searchText)
  */
 function searchStatus(string $_status): callable
 {
-
     return function ($mockTaskItem) use ($_status) {
-        //echo $status."<br>";
-        //echo $mockTaskItem['status']."<br>";
-        if ($_status !== '') {
-            if ($_status !== 'all') {
-                $result = strpos($mockTaskItem['status'], $_status) !== false;
-            } else {
+            if (($_status === '') || ($_status === 'all')) {
                 $result = true;
+            } else {
+                $result = strpos($mockTaskItem['status'], $_status) !== false; 
             }
-        } else {
-            $result = true;
-        }
-        //$result=($mockTaskItem['status']===$status);
         return $result;
     };
 }
