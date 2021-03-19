@@ -26,7 +26,7 @@ function searchText($searchText)
  * (progress|done|todo)
  * @return callable La funzione che verrà utilizzata da array_filter
  */
-function searchStatus(string $_status){
+function searchStatus($_status){
     return function ($mockTaskItem) use ($_status) {
             if (($_status === '') || ($_status === 'all')) {
                 $result = true;
