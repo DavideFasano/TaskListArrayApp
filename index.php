@@ -8,7 +8,7 @@ if (isset($_GET['status'])) {
     $check = 'all';
 }
 
-$taskList = JSONReader('./dataset/TaskList.json');
+$taskList = JSONReader("./dataset/TaskList.json");
 
 if (isset($_GET['searchText'])) {
     $searchText = trim(filter_var($_GET['searchText'], FILTER_SANITIZE_STRING));

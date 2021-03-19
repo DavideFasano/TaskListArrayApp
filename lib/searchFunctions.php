@@ -13,7 +13,6 @@ function searchText($searchText)
         $stringToLower = strtolower($taskItem['taskName']);
         $searchToLower = trim(strtolower($cleanedSpaces));
         if ($searchToLower !== '') {
- 
             $result = strpos($stringToLower, $searchToLower) !== false;
         } else {
             $result = true;
@@ -27,8 +26,7 @@ function searchText($searchText)
  * (progress|done|todo)
  * @return callable La funzione che verrà utilizzata da array_filter
  */
-function searchStatus(string $_status): callable
-{
+function searchStatus(string $_status){
     return function ($mockTaskItem) use ($_status) {
             if (($_status === '') || ($_status === 'all')) {
                 $result = true;
